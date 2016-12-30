@@ -1,0 +1,20 @@
+#!/bin/bash
+for var in "$@"
+do
+	str=""
+	tmp=""
+	for (( i=0; i<${#var}; i++ )); do
+		if [ ${var:$i:1} != '/' ]; then
+			tmp+=${var:$i:1}
+		else
+			str+=$tmp
+			str+='/'
+			tmp=""
+		fi
+	done
+	mkdir -p ${str}FixedSubtitles
+	iconv -f WINDOWS-1256 -t UTF-8 $var --output ${str}FixedSubtitles/$tmp
+	sed s/ي/ی/g -i ${str}FixedSubtitles/$tmp
+	sed s/ك/ک/g -i ${str}FixedSubtitles/$tmp
+done
+
