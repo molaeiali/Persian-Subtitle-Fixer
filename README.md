@@ -2,7 +2,9 @@
 Fix unicode problems of persian srt subtitle files.
 
 # Install
-Place script someware in your PATH and use it everyware
+Place script someware in your PATH and use it everyware or run install.sh script
+
+    ./install.sh
 
 #Using
 It accepts infinite arguments in these formats
