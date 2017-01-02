@@ -14,6 +14,9 @@ do
 	done
 	mkdir -p "${str}FixedSubtitles"
 	encode="$(file --mime-encoding -b "$var")"
+	if [ "$encode" == "unknown-8bit" ]; then
+		encode="WINDOWS-1256"
+	fi
 	iconv -f "$encode" -t UTF-8 "$var" --output "${str}FixedSubtitles/$tmp"
 	sed s/ي/ی/g -i "${str}FixedSubtitles/$tmp"
 	sed s/ك/ک/g -i "${str}FixedSubtitles/$tmp"
