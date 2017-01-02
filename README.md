@@ -1,5 +1,5 @@
 # Persian-Subtitle-Fixer
-Fix unicode problems of persian srt subtitle files. (Convert them from Windows-1256 to UTF-8)
+Fix unicode problems of persian srt subtitle files. (Convert them from anything to UTF-8)
 
 # Install
 Place script somewhere in your PATH and use it everywhere or run install.sh script
