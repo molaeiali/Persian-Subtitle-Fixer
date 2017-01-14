@@ -20,5 +20,6 @@ do
 	iconv -f "$encode" -t UTF-8 "$var" --output "${str}FixedSubtitles/$tmp"
 	sed s/ي/ی/g -i "${str}FixedSubtitles/$tmp"
 	sed s/ك/ک/g -i "${str}FixedSubtitles/$tmp"
+	sed s/\<i\>/""/g -i "${str}FixedSubtitles/$tmp"
+ 	sed s/\<\\/i\>/""/g -i "${str}FixedSubtitles/$tmp"
 done
-
